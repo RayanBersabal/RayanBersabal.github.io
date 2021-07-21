@@ -38,11 +38,10 @@ header{
 	padding: 20px ;
 	background-color: var(--background-color);
 	transition: background-color 1s;
+
 }
 header h1{
 	color: var(--title-color);
-	top: 2.5rem;
-	left: 2.5rem;
 }
 .toggle-btn{
 	width: 4rem;
@@ -63,7 +62,6 @@ header h1{
 }
 .container{
 	width: 100%;
-	max-width: 120rem;
 	padding: 0 1.5rem;
 	margin: 0 auto;
 }
@@ -85,29 +83,46 @@ header h1{
 	flex: 1;
 	padding: 5rem;
 }
-.education{
-	flex: 1;
-	margin: 50px;
-}
-.experience{
-	flex: 1;
-	margin: 50px;
-}
-.row{
-	margin: 25px;
-	padding: 20px;
-}
-.row h3{
-	font-size: 30px;
-	margin-bottom: 10px 0;
-}
-.row p{
-	font-size: 20px;
-	padding: 5px;
-}
-.contact{
+.box-area{
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--background-color);
+	margin-top: 40px;
 }
+.single-box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 400px;
+	height: auto;
+	background-color: var(--foreground-color);
+	text-align: center;
+	margin: 20px 10px;
+	padding: 20px 10px;
+	transition: .3s;
+}
+.single-box:hover{
+	background: #e91e63;
+	color: #fff;
+}
+.header-text{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 48px;
+}
+.text{
+	padding-top: 20px;
+}
+.text p{
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
 .title{
 	font-family: 'Playfair Display', sans-serif;
 	font-size: 5rem;
@@ -122,6 +137,122 @@ header h1{
 .paragraph:not(:last-child){
 	margin-bottom: 1.5rem;
 }
+.contact{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+.contact .contents{
+
+	text-align: center;
+}
+.contact .contents h2{
+	font-size: 36px;
+	font-weight: 500;
+	color: var(--title-color);
+}
+.contact .contents p{
+	font-weight: 300;
+	color: var(--title-color);
+}
+.containers{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.containers .contactInfo{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.containers .contactInfo .box{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.containers .contactInfo .box .icon{
+	min-width: 60px;
+	height: 60px;
+	background: var(--title-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.containers .contactInfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: var(--title-color);
+	flex-direction: column;
+	font-weight: 300;
+}
+.containers .contactInfo .box .text h3{
+	font-weight: 500;
+	color: #00bcd4;
+}
+.contactForm{
+	width: 40%;
+	padding: 40px;
+	background: #fff;
+}
+.contactForm h2{
+	font-size: 30px;
+	 color: #333;
+	 font-weight: 500;
+}
+.contactForm .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	resize: none;
+	border-bottom: 2px solid #333;
+}
+.contactForm .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+	width: 100px;
+	background: #00bcd4;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+	color: #fff;
+}
+
 footer{
 	background: #111;
 	height: auto;
@@ -136,6 +267,12 @@ footer{
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+}
+.footer-content h3{
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	line-height: 3rem;
 }
 .socials{
 	list-style: none;
@@ -156,7 +293,7 @@ footer{
 	transition: color .4s ease;
 }
 .socials a:hover i{
-	color: #181621;
+	color: #e91e63;
 }
 .footer-bottom{
 	background: #000;
@@ -174,13 +311,31 @@ footer{
 	opacity: .4;
 	font-weight: 400;
 }
-@media screen and (max-width: 800px){
-	
-	.education{
+@media screen and (max-width: 890px){
+	.single-box{
+		width: 700px;
+	}
+	.contact{
+		padding: 50px;
+	}
+	.containers{
+		flex-direction: column;
+	}
+	.containers .contactInfo{
+		margin-bottom: 40px;
+	}
+	.containers .contactInfo,
+	.contactForm{
 		width: 100%;
 	}
-	.experience{
-		width: 100%;
-	}
+}
 
+@media screen and (max-width: 720px){
+	.content{
+		flex-direction: column;
+		width: 100%;
+	}
+	.single-box{
+		width: 700px;
+	}
 }
