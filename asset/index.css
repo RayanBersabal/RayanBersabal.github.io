@@ -32,23 +32,24 @@ section{
 	display: flex;
 	justify-content: center;
 	page-break-after: 2.5rem 0;
+	margin: 0;
+	padding: 0;
 
 }
 header{
 	padding: 20px ;
-	background-color: var(--background-color);
-	transition: background-color 1s;
+	background-color: #333;
 
 }
 header h1{
-	color: var(--title-color);
+	color: #fff;
 }
 .toggle-btn{
-	width: 4rem;
-	height: 4rem;
+	width: 3rem;
+	height: 3rem;
 	position: absolute;
 	top: 2rem;
-	right: 2rem;
+	right: 4rem;
 	border: 2px solid var(--body-color);
 	display: flex;
 	cursor: pointer;
@@ -140,7 +141,7 @@ header h1{
 .contact{
 	position: relative;
 	min-height: 100vh;
-	padding: 50px 100px;
+	padding: 40px 75px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -200,7 +201,7 @@ header h1{
 	color: #00bcd4;
 }
 .contactForm{
-	width: 40%;
+	width: 60%;
 	padding: 40px;
 	background: #fff;
 }
@@ -339,3 +340,4 @@ footer{
 		width: 700px;
 	}
 }
+
